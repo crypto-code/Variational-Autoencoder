@@ -23,3 +23,8 @@ You could actually get rid of this latter term entirely, although it does help i
 * Keras (https://pypi.org/project/Keras/)
 * Scipy (https://pypi.org/project/scipy/)
 * OpenCV (https://pypi.org/project/opencv-python/)
+
+## Examples:
+
+<p align="center">
+<img src="https://github.com/crypto-code/Variational-Autoencoder/blob/master/assets/Pokemons.jpg"  align="middle" />   </p>
