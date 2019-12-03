@@ -14,3 +14,12 @@ The parameters of the model are trained via two loss functions:
 * KL divergence between the learned latent distribution and the prior distribution, acting as a regularization term. 
 
 You could actually get rid of this latter term entirely, although it does help in learning well-formed latent spaces and reducing overfitting to the training data.
+
+
+## Requirements:
+* Python 3.6.2 (https://www.python.org/downloads/release/python-362/)
+* Numpy (https://pypi.org/project/numpy/)
+* Tensorflow (https://pypi.org/project/tensorflow/)
+* Keras (https://pypi.org/project/Keras/)
+* Scipy (https://pypi.org/project/scipy/)
+* OpenCV (https://pypi.org/project/opencv-python/)
