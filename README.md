@@ -24,6 +24,9 @@ You could actually get rid of this latter term entirely, although it does help i
 * Scipy (https://pypi.org/project/scipy/)
 * OpenCV (https://pypi.org/project/opencv-python/)
 
+## Usage
+* Download an image dataset, a pokemon dataset is already included (provided by @moxiegushi)
+
 ## Examples:
 
 <p align="center">
