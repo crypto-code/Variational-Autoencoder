@@ -25,7 +25,7 @@ You could actually get rid of this latter term entirely, although it does help i
 * OpenCV (https://pypi.org/project/opencv-python/)
 
 ## Usage
-* Download an image dataset, a pokemon dataset is already included (provided by @moxiegushi)
+* Download an image dataset, a pokemon dataset is already included (provided by [moxiegushi](https://github.com/moxiegushi/pokeGAN))
 
 ## Examples:
 
