@@ -27,6 +27,34 @@ You could actually get rid of this latter term entirely, although it does help i
 ## Usage
 * Download an image dataset, a pokemon dataset is already included (provided by [moxiegushi](https://github.com/moxiegushi/pokeGAN))
 
+* Convert the Image colour scheme from RGBA to RGB by running,
+```
+python RGBA2RGB.py --help
+usage: RGBA2RGB.py [-h] --input INPUT --output OUTPUT
+
+Convert RGBA to RGB
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --input INPUT    Directory containing images to resize. eg: ./resized
+  --output OUTPUT  Directory to save resized images. eg: ./RGB_data
+ ```
+ 
+* Resize the image for input using the resize script,
+```
+python resize.py --help
+usage: resize.py [-h] --input INPUT --output OUTPUT
+
+Resize Input Images
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --input INPUT    Directory containing images to resize. eg: ./data
+  --output OUTPUT  Directory to save resized images. eg: ./resized
+
+```
+
+
 ## Examples:
 
 <p align="center">
