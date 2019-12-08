@@ -81,6 +81,11 @@ optional arguments:
 <img src="https://github.com/crypto-code/Variational-Autoencoder/blob/master/assets/Pokemons.jpg"  align="middle" />   </p>
 The images aren't perfect but do have a likeness to actual pokemons.
 
+## Credits
+
+Thank you [Jabrils](http://jabrils.com/pokeblend/) for giving me the idea for this project. 
+Thank you [moxiegushi](https://github.com/moxiegushi/pokeGAN) for providing me with the dataset.
+
 
 # G00D LUCK
 
