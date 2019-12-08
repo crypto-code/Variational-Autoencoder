@@ -10,8 +10,8 @@ In contrast to the more standard uses of neural networks as regressors or classi
 First, an encoder network turns the input samples x into two parameters in a latent space, which we will note **z_mean** and **z_log_sigma**. Then, we randomly sample similar points z from the latent normal distribution that is assumed to generate the data, via **z = z_mean + exp(z_log_sigma) * epsilon**, where epsilon is a random normal tensor. Finally, a decoder network maps these latent space points back to the original input data.
 
 The parameters of the model are trained via two loss functions: 
-* Reconstruction Loss forcing the decoded samples to match the initial inputs (just like normal autoencoders)
-* KL divergence between the learned latent distribution and the prior distribution, acting as a regularization term. 
+* Reconstruction Loss forcing the decoded samples to match the initial inputs (just like normal autoencoders) [line 86]
+* KL divergence between the learned latent distribution and the prior distribution, acting as a regularization term. [line 87]
 
 You could actually get rid of this latter term entirely, although it does help in learning well-formed latent spaces and reducing overfitting to the training data.
 
@@ -30,6 +30,7 @@ You could actually get rid of this latter term entirely, although it does help i
 * Convert the Image colour scheme from RGBA to RGB by running,
 ```
 python RGBA2RGB.py --help
+
 usage: RGBA2RGB.py [-h] --input INPUT --output OUTPUT
 
 Convert RGBA to RGB
@@ -43,6 +44,7 @@ optional arguments:
 * Resize the image for input using the resize script,
 ```
 python resize.py --help
+
 usage: resize.py [-h] --input INPUT --output OUTPUT
 
 Resize Input Images
@@ -54,8 +56,33 @@ optional arguments:
 
 ```
 
+* Once the dataset is prepared you can run the VAE on it by using the vae script,
+```
+python vae.py --help
+
+Using TensorFlow backend.
+usage: vae.py [-h] --input INPUT [--epoch EPOCH] [--batch BATCH]
+              [--inter_dim INTER_DIM]
+
+Variational Autoencoder
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --input INPUT         Directory containing images eg: data/
+  --epoch EPOCH         No of training iterations
+  --batch BATCH         Batch Size
+  --inter_dim INTER_DIM
+                        Dimension of Intermediate Layer
+```
 
 ## Examples:
 
 <p align="center">
 <img src="https://github.com/crypto-code/Variational-Autoencoder/blob/master/assets/Pokemons.jpg"  align="middle" />   </p>
+The images aren't perfect but do have a likeness to actual pokemons.
+
+
+# G00D LUCK
+
+For doubts email me at:
+atinsaki@gmail.com
