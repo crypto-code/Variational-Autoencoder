@@ -134,8 +134,10 @@ with torch.no_grad():
 
     for i, yi in enumerate(grid_x):
         for j, xi in enumerate(grid_y):
-            z_sample = torch.tensor([[xi, yi]], dtype=torch.float32)
-            x_decoded = vae.decode(z_sample).numpy()
+            z_sample = torch.tensor([[xi, yi]], dtype=torch.float32).to(
+                torch.device("cuda" if torch.cuda.is_available() else "cpu")
+            )
+            x_decoded = vae.decode(z_sample).cpu().numpy()
             newimage = x_decoded.reshape(digit_size, digit_size, 3)
             figure[
                 i * digit_size : (i + 1) * digit_size,
