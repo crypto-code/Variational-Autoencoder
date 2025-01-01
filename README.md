@@ -19,8 +19,7 @@ You could actually get rid of this latter term entirely, although it does help i
 ## Requirements:
 * Python 3.6.2 (https://www.python.org/downloads/release/python-362/)
 * Numpy (https://pypi.org/project/numpy/)
-* Tensorflow (https://pypi.org/project/tensorflow/)
-* Keras (https://pypi.org/project/Keras/)
+* PyTorch (https://pytorch.org/)
 * Scipy (https://pypi.org/project/scipy/)
 * OpenCV (https://pypi.org/project/opencv-python/)
 
@@ -58,19 +57,18 @@ optional arguments:
 
 * Once the dataset is prepared you can run the VAE on it by using the vae script,
 ```
-python vae.py --help
-
-Using TensorFlow backend.
-usage: vae.py [-h] --input INPUT [--epoch EPOCH] [--batch BATCH]
-              [--inter_dim INTER_DIM]
+usage: vae.py [-h] --input INPUT --name NAME [--epoch EPOCH] [--batch BATCH] [--original_dim ORIGINAL_DIM] [--inter_dim INTER_DIM]
 
 Variational Autoencoder
 
-optional arguments:
+options:
   -h, --help            show this help message and exit
   --input INPUT         Directory containing images eg: data/
-  --epoch EPOCH         No of training iterations
+  --name NAME           Name for the model
+  --epoch EPOCH         Number of training iterations
   --batch BATCH         Batch Size
+  --original_dim ORIGINAL_DIM
+                        Dimension of Intermediate Layer
   --inter_dim INTER_DIM
                         Dimension of Intermediate Layer
 ```
